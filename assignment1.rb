@@ -92,7 +92,7 @@ puts "**************************************************************************
 
 puts '14.  Program to Check Vowel or consonant'
 			char = gets
-			if char == "a"||"e"||"i"||"o"||"u"
+			if char == "a"||char =="e"||char =="i"||char =="o"||char =="u"
 				puts "vowle"
 			else
 				puts "consonant"	
