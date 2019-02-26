@@ -83,9 +83,9 @@ puts "**************************************************************************
 puts '13. Write a method which tells if the number is even or odd?'
 			i=gets
 			if i % 2 == 0
-				puts "#{i} odd"
+				puts "#{i} even"
 			else 
-				puts "#{i} is even"
+				puts "#{i} is odd"
 			end
 
 puts "****************************************************************************************"
@@ -112,7 +112,7 @@ puts '15. Fibonacci Series up to n number of terms'
 			    f1=1
 			    f2=0
 			    f3=0
-			        while f3<n do 
+			        while f3<n-1 do 
 			          f3=f1+f2
 			          puts f3
 			          f1=f2
@@ -131,15 +131,27 @@ puts '16. Display Prime Numbers Between Two Intervals'
 
 			class Prime
 				def number
-					puts "Enter the Fibonacci value"
-			    number = gets.to_i
-				  n = 2
-				  while n < number
-				    return false if number % n == 0
-				    n += 1
-				  end
-				  true
+					puts "Enter first number"
+					first = gets.to_i
+					puts "Enter last number"
+			   		last = gets.to_i
+
+			   		(first..last).each do |n|
+						i=2
+			   			count =0
+			   			while i < n 
+			   				if n % i == 0
+			   					count +=1
+			   				end
+			   				i = i+1
+			   			end
+			   			if count==0
+			   				puts "#{n}"
+			   			end
+			   			
+			   		end
 				end
+			end
 			p_obj = Prime.new
 			p_obj.number 
 				
